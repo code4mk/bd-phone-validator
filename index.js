@@ -37,7 +37,7 @@ let bdPhone = function phone(num) {
       valid_status['exceed'] = false
       valid_status['exceed_digit'] = 0
     }
-    console.log(valid_status)
+    // console.log(valid_status)
     return valid_status
   } else {
     console.log('phone is undefined')
