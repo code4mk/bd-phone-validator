@@ -1,23 +1,24 @@
-
+/**=====================================================================
+ https://code4mk.org
+ https://github.com/code4mk
+==========================================================================*/
 let bdPhone = function phone(num) {
-
+   // operator num  <num>
   if (num !== undefined && num !== ' ' && num !== '') {
     const regex = /(\+){0,1}(88){0,1}01(3|7|8|6|9|5)(\d){8}/;
-    var num = num
-    var country_code = '+88'
-    var valid_status = {}
+    let num = num
+    let country_code = '+88'
+    let valid_status = {}
+    let remove_nonDigit = num.replace(/[\D]/gi,'')
 
-    var remove_nonDigit = num.replace(/[\D]/gi,'')
-
-    var eight_status = country_code.concat(remove_nonDigit.replace(/^\+*8+/gi,''))
-    var phn_length = eight_status.slice(0,14)
+    let eight_status = country_code.concat(remove_nonDigit.replace(/^\+*8+/gi,''))
+    let phn_length = eight_status.slice(0,14)
 
     if (phn_length.length >= 14) {
       valid_status['suggest'] = phn_length
     }
-
+    // operator status & need digit
     if (regex.exec(phn_length) === null ) {
-
       if (phn_length.length < 14) {
         valid_status['digit_status'] = 'need 11 digits'
         valid_status['need'] = 14 - phn_length.length
@@ -29,6 +30,7 @@ let bdPhone = function phone(num) {
       valid_status['operator_status'] =  'valid operator'
       valid_status['operator'] = true
     }
+    // digit status exceed
     if (eight_status.length > 14){
       exceed_digit = eight_status.length - 14
       valid_status['exceed'] = exceed_digit
