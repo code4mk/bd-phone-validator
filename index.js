@@ -4,9 +4,10 @@
 ==========================================================================*/
 let bdPhone = function phone(num) {
    // operator num  <num>
+
   if (num !== undefined && num !== ' ' && num !== '') {
     const regex = /(\+){0,1}(88){0,1}01(3|7|8|6|9|5)(\d){8}/;
-    let num = num
+    var num = num
     let country_code = '+88'
     let valid_status = {}
     let remove_nonDigit = num.replace(/[\D]/gi,'')
