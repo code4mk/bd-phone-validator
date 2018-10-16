@@ -1,0 +1,26 @@
+{
+  "name": "@0devco/bd-phone-validator",
+  "version": "0.0.0",
+  "description": "Bangladesh (BD) mobile phone validation",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code4mk/bd-phone-validator"
+  },
+  "keywords": [
+    "0devco",
+    "bd",
+    "bd-phone-validation",
+    "bd-sellnum-validation",
+    "bd-mobile-operator"
+  ],
+  "author": {
+    "name": "code4mk",
+    "email": "hireMostafa@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/code4mk/bd-phone-validator/issues"
+  },
+  "homepage": "https://github.com/code4mk/bd-phone-validator"
+}
