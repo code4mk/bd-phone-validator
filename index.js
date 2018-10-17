@@ -15,9 +15,7 @@ let bdPhone = function phone(num) {
     let eight_status = country_code.concat(remove_nonDigit.replace(/^\+*8+/gi,''))
     let phn_length = eight_status.slice(0,14)
 
-    if (phn_length.length >= 14) {
-      valid_status['suggest'] = phn_length
-    }
+
     // operator status & need digit
     if (regex.exec(phn_length) === null ) {
       if (phn_length.length < 14) {
@@ -30,16 +28,22 @@ let bdPhone = function phone(num) {
     } else {
       valid_status['operator_status'] =  'valid operator'
       valid_status['operator'] = true
+
+      if (phn_length.length >= 14) {
+        valid_status['suggest'] = phn_length
+      }
+      // digit status exceed
+      if (eight_status.length > 14){
+        exceed_digit = eight_status.length - 14
+        valid_status['exceed'] = exceed_digit
+        valid_status['digit_status'] = `exceed ${exceed_digit} digit`
+      } else {
+        valid_status['exceed'] = false
+        valid_status['exceed_digit'] = 0
+      }
+
     }
-    // digit status exceed
-    if (eight_status.length > 14){
-      exceed_digit = eight_status.length - 14
-      valid_status['exceed'] = exceed_digit
-      valid_status['digit_status'] = `exceed ${exceed_digit} digit`
-    } else {
-      valid_status['exceed'] = false
-      valid_status['exceed_digit'] = 0
-    }
+
     // console.log(valid_status)
     return valid_status
   } else {
