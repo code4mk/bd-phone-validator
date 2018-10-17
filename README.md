@@ -1,5 +1,5 @@
 # `+880` bd-phone-validator
-Bangladesh phone operator validation [ BD sell-phone validation ] , gp , robi , banglalink , teletalk , airtel ...
+Bangladesh phone number validation 
 
 * [https://www.npmjs.com/package/@0devco/bd-phone-validator](https://www.npmjs.com/package/@0devco/bd-phone-validator)
 
