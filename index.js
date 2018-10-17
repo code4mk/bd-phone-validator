@@ -51,14 +51,11 @@ let bdPhone = function phone(num) {
         status['digit_status'] = `exceed ${countExceedDigit} digit`
       }
     }
-
     // console.log(status)
     return status
   } else {
-    console.log('phone is undefined');
+    console.log('phone is undefined')
   }
-
 }
-
 module.exports = bdPhone
 module.exports.default = bdPhone;
