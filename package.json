@@ -1,6 +1,6 @@
 {
   "name": "@0devco/bd-phone-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bangladesh (BD)  phone number validation",
   "main": "./index.js",
   "repository": {
