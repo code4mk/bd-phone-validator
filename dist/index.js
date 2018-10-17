@@ -12,7 +12,6 @@ let bdPhone = function phone(num) {
     let collectDigit = originalNum.replace(/[\D]/gi,'');
     let reduntantCountryCode = countryCode.concat(collectDigit.replace(/^\+*8+/gi,''));
     let bdSuggestPhone = reduntantCountryCode.slice(0,14);
-    console.log(bdSuggestPhone.slice(5,6))
     if (validatorRegex.exec(originalNum) !== null && validatorRegex.exec(originalNum)[0] === originalNum ) {
       status['core_valid'] = true
     } else {
@@ -50,6 +49,8 @@ let bdPhone = function phone(num) {
         countExceedDigit = reduntantCountryCode.length - 14
         status['exceed'] = countExceedDigit
         status['has_exceed'] = true
+        status['original_number'] = reduntantCountryCode
+        status['exceed_digit'] = reduntantCountryCode.slice(14,reduntantCountryCode.length)
         status['digit_status'] = `exceed ${countExceedDigit} digit`
       }
     }

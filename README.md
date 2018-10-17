@@ -30,7 +30,7 @@ console.log(check)
 ```js
 bdPhone('01751200200')
 ```
-<p><img src="https://user-images.githubusercontent.com/17185462/47054880-3eb42500-d1d6-11e8-9394-8bfc508a8eb9.PNG"></p>
+<p><img src="https://user-images.githubusercontent.com/17185462/47107057-170e9c80-d26a-11e8-91c4-b83b3c65f95f.PNG"></p>
 
 
 # less 11 digit
@@ -41,7 +41,7 @@ bdPhone('01751200200')
 bdPhone('0175120020')
 ```
 
-<p><img src="https://user-images.githubusercontent.com/17185462/47055226-10cfe000-d1d8-11e8-8762-44abda773d03.PNG"></p>
+<p><img src="https://user-images.githubusercontent.com/17185462/47107103-3dccd300-d26a-11e8-9406-648f3a3d5de8.PNG"></p>
 
 # exceed (digit > 11)
 
@@ -52,7 +52,7 @@ bdPhone('0175120020')
 ```js
 bdPhone('013512002002')
 ```
-<p><img src="https://user-images.githubusercontent.com/17185462/47054884-483d8d00-d1d6-11e8-8d09-c29e4ad40af1.PNG"></p>
+<p><img src="https://user-images.githubusercontent.com/17185462/47107133-56d58400-d26a-11e8-9d2b-d6f20e1f25a5.PNG"></p>
 
 # invalid operator
 
@@ -62,7 +62,7 @@ bdPhone('013512002002')
 bdPhone('012512002002')
 ```
 
-<p><img src="https://user-images.githubusercontent.com/17185462/47054891-4ecc0480-d1d6-11e8-8ff3-cc64906ba2d5.PNG"></p>
+<p><img src="https://user-images.githubusercontent.com/17185462/47107175-6fde3500-d26a-11e8-8d6d-56bafed3bcbd.PNG"></p>
 
 # demo
 
