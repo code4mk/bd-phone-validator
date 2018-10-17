@@ -3,53 +3,47 @@
  https://github.com/code4mk
 ==========================================================================*/
 let bdPhone = function phone(num) {
-   // operator num  <num>
+  // TODO: status object should have keys as camelCase not as snake_case
+  // TODO: If exceed is false, no need to have exceed_digit 0
+  // TODO: If operator is false, no need to have operator_status as invalid- this is extra!
 
-  if (num !== undefined && num !== ' ' && num !== '') {
-    const regex = /(\+){0,1}(88){0,1}01(3|7|8|6|9|5)(\d){8}/;
-    var num = num
-    let country_code = '+88'
-    let valid_status = {}
-    let remove_nonDigit = num.replace(/[\D]/gi,'')
+  if (num !== undefined && num.trim() !== '') {
+    const validPhoneNumberRegex = /(\+){0,1}(88){0,1}01(3|7|8|6|9|5)(\d){8}/;
+    let countryCode = '+88';
+    let status = {};
+    let actualNumber = num.replace(/(\+88)|[\D]/gi,'');
+    let numberWithCountryCode = `${countryCode}${actualNumber}`;
 
-    let eight_status = country_code.concat(remove_nonDigit.replace(/^\+*8+/gi,''))
-    let phn_length = eight_status.slice(0,14)
-
-
-    // operator status & need digit
-    if (regex.exec(phn_length) === null ) {
-      if (phn_length.length < 14) {
-        valid_status['digit_status'] = 'need 11 digits'
-        valid_status['need'] = 14 - phn_length.length
+    if (validPhoneNumberRegex.exec(numberWithCountryCode) === null) {
+      if (numberWithCountryCode.length < 14) {
+        status['digit_status'] = 'should have 11 digits';
+        status['need'] = 14 - numberWithCountryCode.length;
       } else {
-        valid_status['operator_status'] =  'invalid operator'
-        valid_status['operator'] = false
+        status['operator_status'] =  'invalid operator';
+        status['operator'] = false;
       }
     } else {
-      valid_status['operator_status'] =  'valid operator'
-      valid_status['operator'] = true
+      status['operator_status'] =  'valid operator';
+      status['operator'] = true;
 
-      if (phn_length.length >= 14) {
-        valid_status['suggest'] = phn_length
-      }
-      // digit status exceed
-      if (eight_status.length > 14){
-        exceed_digit = eight_status.length - 14
-        valid_status['exceed'] = exceed_digit
-        valid_status['digit_status'] = `exceed ${exceed_digit} digit`
-      } else {
-        valid_status['exceed'] = false
-        valid_status['exceed_digit'] = 0
+      if (numberWithCountryCode.length >= 14) {
+        status['suggest'] = numberWithCountryCode;
       }
 
+      let extraDigitCount = actualNumber.length - 14;
+      status['exceed'] = extraDigitCount > 0;
+      status['exceed_digit'] = status['exceed'] ? extraDigitCount : 0;
+      if (status['exceed']) {
+        status['digit_status'] = `exceeds ${extraDigitCount} digits`;
+      }
     }
 
-    // console.log(valid_status)
-    return valid_status
+    return status;
   } else {
-    console.log('phone is undefined')
+    console.log('phone is undefined');
   }
 
 }
+
 module.exports = bdPhone
 module.exports.default = bdPhone;
