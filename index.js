@@ -5,7 +5,7 @@
 let bdPhone = function phone(num) {
    // operator number  <num>
   if (num !== undefined && num.trim() !== '') {
-    const validatorRegex = /(\+){0,1}(88){0,1}01(3|7|8|6|9|5)(\d){8}/;
+    const validatorRegex = /(\+){0,1}(88){0,1}01(3|5|6|7|8|9)(\d){8}/;
     var originalNum = num;
     let countryCode = '+88';
     let status = {};
@@ -20,7 +20,8 @@ let bdPhone = function phone(num) {
     }
 
     function checkOperatorDigit() {
-      if (bdSuggestPhone.slice(5,6) === '7') {
+      let operatorDigit = bdSuggestPhone.slice(5,6)
+      if ( operatorDigit === '3'||operatorDigit === '5'||operatorDigit === '6'||operatorDigit === '7'||operatorDigit === '8'||operatorDigit === '9') {
         return true
       }
       return false
