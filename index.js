@@ -20,7 +20,7 @@ let bdPhone = function phone(num) {
     }
 
     function checkOperatorDigit() {
-      if (bdSuggestPhone.slice(5,6) === ('3'||'5'||'6'||'7'||'8'||'9')) {
+      if (bdSuggestPhone.slice(5,6) === '7') {
         return true
       }
       return false
@@ -28,7 +28,8 @@ let bdPhone = function phone(num) {
 
     // operator status & need digit
     if (validatorRegex.exec(bdSuggestPhone) === null ) {
-      if (bdSuggestPhone.length < 14 && checkOperatorDigit()) {
+      if (checkOperatorDigit() && bdSuggestPhone.length < 14 ) {
+        console.log("true  operator digit")
         status['digit_status'] = 'Number length must be 11 digits'
         status['need_digit'] = 14 - bdSuggestPhone.length
       } else {
