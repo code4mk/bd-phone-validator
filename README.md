@@ -28,8 +28,8 @@ console.log(check)
 ```js
 bdPhone('01751200200')
 ```
+<p align="center" ><img src="https://user-images.githubusercontent.com/17185462/47054880-3eb42500-d1d6-11e8-9394-8bfc508a8eb9.PNG"></p>
 
-![bd1](https://user-images.githubusercontent.com/17185462/47054880-3eb42500-d1d6-11e8-9394-8bfc508a8eb9.PNG)
 
 # less 11 digit
 
@@ -39,7 +39,7 @@ bdPhone('01751200200')
 bdPhone('0175120020')
 ```
 
-![bd4](https://user-images.githubusercontent.com/17185462/47055226-10cfe000-d1d8-11e8-8762-44abda773d03.PNG)
+<p align="center" ><img src="https://user-images.githubusercontent.com/17185462/47055226-10cfe000-d1d8-11e8-8762-44abda773d03.PNG"></p>
 
 # exceed (digit > 11)
 
@@ -50,8 +50,7 @@ bdPhone('0175120020')
 ```js
 bdPhone('013512002002')
 ```
-
-![bd2](https://user-images.githubusercontent.com/17185462/47054884-483d8d00-d1d6-11e8-8d09-c29e4ad40af1.PNG)
+<p align="center" ><img src="https://user-images.githubusercontent.com/17185462/47054884-483d8d00-d1d6-11e8-8d09-c29e4ad40af1.PNG"></p>
 
 # invalid operator
 
@@ -61,6 +60,7 @@ bdPhone('013512002002')
 bdPhone('012512002002')
 ```
 
-![bd3](https://user-images.githubusercontent.com/17185462/47054891-4ecc0480-d1d6-11e8-8ff3-cc64906ba2d5.PNG)
+<p align="center" ><img src="https://user-images.githubusercontent.com/17185462/47054891-4ecc0480-d1d6-11e8-8ff3-cc64906ba2d5.PNG"></p>
+
 
 <a href="https://twitter.com/0devco" target="_blank" ><p align="center" ><img src="https://raw.githubusercontent.com/0devco/docs/master/.devco-images/logo-transparent.png"></p></a>
