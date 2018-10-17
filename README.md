@@ -1,5 +1,5 @@
 # `+880` bd-phone-validator
-:BD: Bangladesh phone operator validation [ BD sell-phone validation ] , gp , robi , banglalink , teletalk , airtel ...
+Bangladesh phone operator validation [ BD sell-phone validation ] , gp , robi , banglalink , teletalk , airtel ...
 
 # install
 
@@ -63,4 +63,4 @@ bdPhone('012512002002')
 <p><img src="https://user-images.githubusercontent.com/17185462/47054891-4ecc0480-d1d6-11e8-8ff3-cc64906ba2d5.PNG"></p>
 
 
-<a href="https://twitter.com/0devco" target="_blank" ><p><img src="https://raw.githubusercontent.com/0devco/docs/master/.devco-images/logo-transparent.png"></p></a>
+<a href="https://twitter.com/0devco" target="_blank" > <p align="center"><img src="https://raw.githubusercontent.com/0devco/docs/master/.devco-images/logo-transparent.png"></p></a>
