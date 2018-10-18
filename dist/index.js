@@ -12,6 +12,9 @@ let bdPhone = function phone(num) {
     let collectDigit = originalNum.replace(/[\D]/gi,'');
     let reduntantCountryCode = countryCode.concat(collectDigit.replace(/^\+*8+/gi,''));
     let bdSuggestPhone = reduntantCountryCode.slice(0,14);
+
+    originalNum.slice(0,3) === '+88'  ? status['input_length'] = 14 : status['input_length'] = 11
+
     if (validatorRegex.exec(originalNum) !== null && validatorRegex.exec(originalNum)[0] === originalNum ) {
       status['core_valid'] = true
     } else {
