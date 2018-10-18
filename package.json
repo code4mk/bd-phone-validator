@@ -3,6 +3,10 @@
   "version": "2.0.0",
   "description": "Bangladesh (BD)  phone number validation",
   "main": "./index.js",
+  "scripts": {
+    "unit": "karma start karma.conf.js ",
+    "test": "npm run unit"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/code4mk/bd-phone-validator"
@@ -22,5 +26,17 @@
   "bugs": {
     "url": "https://github.com/code4mk/bd-phone-validator/issues"
   },
-  "homepage": "https://github.com/code4mk/bd-phone-validator"
+  "homepage": "https://github.com/code4mk/bd-phone-validator",
+  "dependencies": {
+    "browserify": "^16.2.3",
+    "jasmine-core": "^3.2.1",
+    "karma": "^3.0.0",
+    "karma-browserify": "^5.3.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-commonjs": "^1.0.0",
+    "karma-coverage": "^1.1.2",
+    "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "watchify": "^3.11.0"
+  }
 }
